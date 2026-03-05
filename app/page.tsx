@@ -76,7 +76,7 @@ export default function Home() {
               <Link 
                 key={project.id} 
                 href={`/projects/${project.slug}`}
-                className={`group relative h-[400px] overflow-hidden rounded-[2.5rem] border border-border animate-fade-in`}
+                className={`group relative h-100 overflow-hidden rounded-[2.5rem] border border-border animate-fade-in`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/60 to-background z-10"></div>
