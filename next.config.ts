@@ -2,13 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  images: {
-    unoptimized: true
-  },
-  // Ensure assets are loaded correctly on GitHub Pages
-  basePath: "",
-  assetPrefix: "",
-  trailingSlash: true,
+  basePath: "/portfolio",
+  assetPrefix: "/portfolio/",
 };
 
 export default nextConfig;
