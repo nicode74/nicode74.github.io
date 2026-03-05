@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
+  // Ensure assets are loaded correctly on GitHub Pages
   basePath: "",
   assetPrefix: "",
   trailingSlash: true,
