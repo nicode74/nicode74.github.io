@@ -14,7 +14,7 @@ export default function Home() {
       <section className="py-24 bg-card-bg/30 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-16 items-center">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 animate-slide-left">
               <h2 className="text-accent font-mono text-sm tracking-widest uppercase mb-4">
                 Highlights
               </h2>
@@ -34,7 +34,7 @@ export default function Home() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </Link>
             </div>
-            <div className="md:w-1/2 grid grid-cols-2 gap-4">
+            <div className="md:w-1/2 grid grid-cols-2 gap-4 animate-slide-right">
               {skills.map((skill) => (
                 <div key={skill} className="px-6 py-8 bg-background border border-border rounded-2xl flex flex-col justify-between group hover:border-accent transition-colors">
                   <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-4">
@@ -72,11 +72,12 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {featuredProjects.map((project) => (
+            {featuredProjects.map((project, index) => (
               <Link 
                 key={project.id} 
                 href={`/projects/${project.slug}`}
-                className="group relative h-[400px] overflow-hidden rounded-[2.5rem] border border-border"
+                className={`group relative h-[400px] overflow-hidden rounded-[2.5rem] border border-border animate-fade-in`}
+                style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-background/60 to-background z-10"></div>
                 <div className="absolute inset-0 bg-accent/20 group-hover:bg-accent/10 transition-colors duration-500"></div>
@@ -107,12 +108,12 @@ export default function Home() {
       </section>
 
       {/* Global CTA */}
-      <section className="py-24 px-6">
-        <div className="container mx-auto max-w-5xl bg-accent p-12 md:p-20 rounded-[3.5rem] text-background text-center flex flex-col items-center">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-[0.9]">
+      <section className="py-24 px-6 animate-fade-in">
+        <div className="container mx-auto max-w-5xl bg-accent p-12 md:p-20 rounded-[3.5rem] text-background text-center flex flex-col items-center shadow-[0_40px_100px_-20px_rgba(6,182,212,0.3)]">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 leading-[0.9] animate-fade-in-delayed">
             READY TO START A NEW PROJECT?
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-long">
             <Link 
               href="/contact" 
               className="px-10 py-5 bg-background text-foreground font-black rounded-full hover:scale-105 transition-transform uppercase tracking-tighter"

@@ -3,10 +3,10 @@ const ContactPage = () => {
     <div className="pt-24 min-h-screen">
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <h1 className="text-4xl md:text-7xl font-bold mb-8 tracking-tighter">
+          <h1 className="text-4xl md:text-7xl font-bold mb-8 tracking-tighter animate-fade-in">
             Get In <span className="text-accent">Touch</span>
           </h1>
-          <p className="text-gray-400 text-xl md:text-2xl mb-16 leading-relaxed">
+          <p className="text-gray-400 text-xl md:text-2xl mb-16 leading-relaxed animate-fade-in delay-200">
             I&apos;m currently open to new opportunities, collaborations, 
             or just a friendly chat about tech!
           </p>
@@ -14,7 +14,7 @@ const ContactPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
             <a 
               href="mailto:contact@nicode.dev" 
-              className="group flex flex-col items-center justify-center p-12 bg-card-bg border border-border rounded-[2.5rem] hover:border-accent transition-all animate-fade-in"
+              className="group flex flex-col items-center justify-center p-12 bg-card-bg border border-border rounded-[2.5rem] hover:border-accent transition-all animate-slide-left delay-300"
             >
               <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -26,7 +26,7 @@ const ContactPage = () => {
             <a 
               href="https://github.com/nicode74" 
               target="_blank"
-              className="group flex flex-col items-center justify-center p-12 bg-card-bg border border-border rounded-[2.5rem] hover:border-accent transition-all animate-fade-in-delayed"
+              className="group flex flex-col items-center justify-center p-12 bg-card-bg border border-border rounded-[2.5rem] hover:border-accent transition-all animate-slide-right delay-300"
             >
               <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -36,7 +36,7 @@ const ContactPage = () => {
             </a>
           </div>
 
-          <div className="p-1.5 bg-linear-to-r from-accent/30 to-border rounded-[3rem]">
+          <div className="p-1.5 bg-linear-to-r from-accent/30 to-border rounded-[3rem] animate-fade-in delay-500">
             <div className="bg-background rounded-[2.8rem] py-16 px-10 border border-border">
               <h2 className="text-3xl font-bold mb-6">Let&apos;s build something meaningful</h2>
               <a 

@@ -6,20 +6,21 @@ const ProjectsPage = () => {
     <div className="pt-24 min-h-screen">
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter animate-fade-in">
             My <span className="text-accent">Projects</span>
           </h1>
-          <p className="text-gray-400 text-lg mb-16 max-w-2xl">
+          <p className="text-gray-400 text-lg mb-16 max-w-2xl animate-fade-in delay-200">
             A showcase of my work in software development, including web applications, 
             mobile apps, and networking configurations.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <Link 
                 key={project.id} 
                 href={`/projects/${project.slug}`}
-                className="group bg-card-bg border border-border rounded-3xl p-8 hover:border-accent/40 transition-all hover:-translate-y-2 flex flex-col h-full"
+                className="group bg-card-bg border border-border rounded-3xl p-8 hover:border-accent/40 transition-all hover:-translate-y-2 flex flex-col h-full animate-scale-up"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="flex justify-between items-start mb-8">
                   <div className="w-12 h-12 bg-background rounded-2xl border border-border group-hover:border-accent flex items-center justify-center text-accent transition-colors">

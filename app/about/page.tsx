@@ -1,5 +1,3 @@
-import { projects } from "@/data/projects";
-
 const About = () => {
   const skills = [
     "Next.js", "React", "Tailwind CSS", "TypeScript", 
@@ -11,12 +9,12 @@ const About = () => {
     <div className="pt-24 min-h-screen">
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-bold mb-12 tracking-tighter">
+          <h1 className="text-4xl md:text-6xl font-bold mb-12 tracking-tighter animate-fade-in">
             About <span className="text-accent">Me</span>
           </h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-left">
               <div className="bg-card-bg border border-border rounded-3xl p-8 md:p-10">
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
                   <span className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center text-accent text-sm font-mono">01</span>
@@ -57,17 +55,18 @@ const About = () => {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-right">
               <div className="bg-card-bg border border-border rounded-3xl p-8 md:p-10">
                 <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
                   <span className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center text-accent text-sm font-mono">03</span>
                   Skills & Tools
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {skills.map((skill) => (
+                  {skills.map((skill, index) => (
                     <div 
                       key={skill} 
-                      className="flex items-center gap-3 text-gray-400 hover:text-accent transition-colors"
+                      className="flex items-center gap-3 text-gray-400 hover:text-accent transition-colors animate-fade-in"
+                      style={{ animationDelay: `${index * 100}ms` }}
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
                       <span>{skill}</span>
@@ -76,7 +75,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="bg-linear-to-br from-accent/10 to-transparent border border-accent/20 rounded-3xl p-8 md:p-10">
+              <div className="bg-linear-to-br from-accent/10 to-transparent border border-accent/20 rounded-3xl p-8 md:p-10 animate-fade-in delay-500">
                 <h2 className="text-2xl font-bold mb-4 text-accent">Goals</h2>
                 <p className="text-gray-400 leading-relaxed">
                   My aim is to become a versatile full-stack engineer who can bridge the gap 

@@ -23,13 +23,13 @@ const ProjectDetails = async ({ params }: { params: { slug: string } }) => {
         <div className="container mx-auto px-6 max-w-4xl">
           <Link 
             href="/projects" 
-            className="inline-flex items-center gap-2 text-gray-500 hover:text-accent mb-12 transition-colors group"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-accent mb-12 transition-colors group animate-fade-in"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
             Back to Projects
           </Link>
 
-          <header className="mb-16">
+          <header className="mb-16 animate-fade-in delay-100">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">
               {project.title}
             </h1>
@@ -43,7 +43,7 @@ const ProjectDetails = async ({ params }: { params: { slug: string } }) => {
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
-            <div className="md:col-span-2 space-y-12">
+            <div className="md:col-span-2 space-y-12 animate-slide-left delay-200">
               <section>
                 <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
                   <span className="w-1 h-6 bg-accent rounded-full"></span>
@@ -76,7 +76,7 @@ const ProjectDetails = async ({ params }: { params: { slug: string } }) => {
               </div>
             </div>
 
-            <aside className="space-y-8">
+            <aside className="space-y-8 animate-slide-right delay-200">
               <div className="bg-card-bg border border-border rounded-3xl p-8 sticky top-32">
                 <h3 className="font-bold mb-6">Links</h3>
                 <div className="space-y-4">
